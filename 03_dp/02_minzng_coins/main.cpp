@@ -11,7 +11,9 @@ void backtrack(vector<int>& coins, int target, int sum, int count) {
 
     if (sum > target) return;
 
-    for (int c : coins) backtrack(coins, target, sum + c, count + 1);
+    for (int c : coins) {
+        backtrack(coins, target, sum + c, count + 1);
+    }
 }
 
 int main() {
